@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href="https://unpkg.com/tabulator-tables@4.0.5/dist/css/tabulator.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="example-table"></div>
+						<script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.0.5/dist/js/tabulator.min.js"></script>
+		<script type="text/javascript">
+
+	var table = new Tabulator("#example-table", {
+		height:500, // set height of table to enable virtual DOM
+		ajaxURL:"https://raw.githubusercontent.com/f-abdelkareem/sbbl/main/ibl2020adv.json",
+        //data:tabledata, //load initial data into table
+		//layout:"fitColumns", //fit columns to width of table (optional)
+		columns:[ //Define Table Columns
+			{title:"Name", field:"fullname", sorter:"string"},
+			{title:"Team", field:"teamname", sorter:"string"},
+			{title:"Position", field:"pos", sorter:"string"},
+			{title:"G", field:"games", sorter:"number"},
+			{title:"Minutes", field:"minutes", sorter:"number"},
+			{title:"MPG", field:"MPG", sorter:"number"},
+			{title:"TS%", field:"TS%", sorter:"number"},
+			{title:"USG%", field:"USG%", sorter:"number"},
+			{title:"2P%", field:"2P%", sorter:"number"},
+			{title:"3P%", field:"3P%", sorter:"number"},
+			{title:"FT%", field:"FT%", sorter:"number"},
+			{title:"3PAr", field:"3PAr", sorter:"number"},
+			{title:"FTAr", field:"FTAr", sorter:"number"},
+		],
+	});
+</script>
+	</body>
+</html>
